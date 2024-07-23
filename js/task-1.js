@@ -10,17 +10,39 @@
 // Дані за кожною категорією були отримані й виведені в консоль у тілі циклу або методу forEach()
 // У консолі має бути виведено наступне повідомлення:
 
-const a = document.querySelector("#categories");
-console.log(`Number of Categories: ${a.childElementCount}`);
-const b = a.children; 
+const retrieveCategories = document.querySelector("#categories");
+console.log(`Number of Categories: ${retrieveCategories.childElementCount}`);
+const listOfCategories = retrieveCategories.children; 
 
-const c = [...b];
+const retrieveListOfCategories = [...listOfCategories];
 
-c.forEach(element => {
+retrieveListOfCategories.forEach(element => {
     console.log(`Category: ${element.firstElementChild.textContent}`);
     console.log(`Elements: ${element.lastElementChild.childElementCount}`);
+    element.querySelector("h2").classList.add("js-item-title");
+    const addListClasses = element.querySelector("ul");
+    addListClasses.classList.add("js-categories-iteam-list"); 
+    
+    const retrieveListOfItem = addListClasses.querySelectorAll("li");
+    const arreyListOfItem = [...retrieveListOfItem];
+    arreyListOfItem.map(el => el.classList.add("js-iteam-list"));
+ });
 
-} )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
