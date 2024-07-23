@@ -16,3 +16,40 @@
 // Якщо при сабміті у формі є незаповнені поля, виводиться alert
 // При сабміті в консоль виводиться об’єкт з двома властивостями, де ключі — це ім’я інпутів, а значення — відповідні значення цих інпутів, очищені від пробілів по краях
 // Після сабміту елементи форми очищаються
+
+const formEl = document.querySelector('.login-form');
+
+const onFormSubmit = event => {
+  event.preventDefault();
+
+  const formData = {
+    email: String(formEl.elements.email.value).trim(),
+    password: String(formEl.elements.password.value).trim(),
+  };
+if (formData.email === "" || formData.password === "") {
+    return alert("All form fields must be filled in");
+}
+  console.log(formData);
+  formEl.reset();
+};
+
+formEl.addEventListener('submit', onFormSubmit);
+
+
+// ------add classes--------//
+
+const retrieveChildrenEl = formEl.children;
+const arreyChildrenEl = [...retrieveChildrenEl]
+
+arreyChildrenEl.forEach(el => {
+    el.classList.add("login-form");
+});
+
+formEl.lastElementChild.classList.add("login-form-button");
+
+const retrieveInputEl = document.querySelectorAll("input");
+const arreyInputEl = [...retrieveInputEl]
+
+arreyInputEl.forEach(inp => {
+    inp.classList.add("js-iteam-list");
+});

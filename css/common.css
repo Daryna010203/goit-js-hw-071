@@ -63,7 +63,7 @@ img {
 .item {
   padding: 16px;
   background: #f6f6fe;
-  border-radius: 8px;  
+  border-radius: 8px;
   width: 392px;
 }
 .js-item-title {
@@ -74,7 +74,6 @@ img {
   line-height: 133%;
   letter-spacing: 0.04em;
   color: #2e2f42;
-  
 }
 
 .js-iteam-list {
@@ -85,9 +84,35 @@ img {
   border: 1px solid #808080;
   border-radius: 4px;
   width: 360px;
-  height: 40px;   
+  height: 40px;
 }
 
 .js-input {
-margin:  8px;
+  margin: 8px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.login-form-button {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-left: 8px;
+  width: 86px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  display: block;
+  border: none;
 }
