@@ -39,14 +39,17 @@ function getRandomHexColor() {
 }
 
 const createBtn = document.querySelector("button[data-create]");
+createBtn.classList.add('js-create-box');
 const destroyBtn = document.querySelector("button[data-destroy]");
+destroyBtn.classList.add('js-destroy-box');
 const addNewBoxes = document.querySelector("#boxes");
 const inputBtn = document.querySelector('input');
+inputBtn.classList.add('js-input-area');
 
 
-const arreyBoxes = [];
 
 function createBoxes(amount) {
+    const arreyBoxes = [];
     let boxSize = 30;
     if (amount <= 1 || amount >= 100) {
         return alert('value out of range')

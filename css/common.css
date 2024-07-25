@@ -138,21 +138,96 @@ img {
   color: #2e2f42;
 }
 
-
 .change-color {
-border-radius: 8px;
-padding: 8px 16px;
-width: 148px;
-height: 40px;
-background: #4e75ff;
-font-family: 'Montserrat', sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: 0.04em;
-color: #fff;
-display: block;
-border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  display: block;
+  border: none;
 }
 
+.js-create-box {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
 
+.js-create-box:hover {
+  background: #6c8cff;
+}
+.js-destroy-box {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background: #ff4e4e;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.js-destroy-box:hover {
+  background: #ff7070;
+}
+.js-input-area {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  width: 150px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #2e2f42;
+  appearance: none;
+}
+
+.js-input-area:hover {
+  border: 1px solid #000;
+}
+
+#controls {
+  display: flex;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  height: 104px;
+  background: #f6f6fe;
+  margin-bottom: 16px;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  background: #f6f6fe;
+}
