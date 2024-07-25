@@ -3,7 +3,8 @@
 
 // Для генерування випадкового кольору використовуй функцію getRandomHexColor().
 
-// Зверни увагу, що функція getRandomHexColor() повертає колір у hex-форматі, в той час як колір фону на <body> буде у форматі rgb. Це нормально й не потребує якихось правок.
+// Зверни увагу, що функція getRandomHexColor() повертає колір у hex-форматі, в той час як колір фону на <body>
+//  буде у форматі rgb.Це нормально й не потребує якихось правок.
 
 
 
@@ -14,15 +15,26 @@
 // На <body> і span.color значення одного й того самого кольору
 
 
-
-
-
-
-
-
-
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+const widgetBtnEl = document.querySelector(".change-color");
+const widgetInfoEl = document.querySelector(".color");
+const bodyEl = document.querySelector("body");
+
+const onBtnColorClick = color => {
+  
+  const changeRandomColor = getRandomHexColor();
+  bodyEl.style.backgroundColor = changeRandomColor;
+  widgetInfoEl.textContent = `${changeRandomColor}`;
+}
+
+widgetBtnEl.addEventListener("click", onBtnColorClick);
+
+document.querySelector("p").classList.add(".js-widget-text");
+
+
+

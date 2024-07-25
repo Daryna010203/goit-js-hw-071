@@ -116,3 +116,43 @@ img {
   display: block;
   border: none;
 }
+
+.widget {
+  border-radius: 8px;
+  padding: 84px 72px;
+  width: 345px;
+  height: 280px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.js-widget-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+
+.change-color {
+border-radius: 8px;
+padding: 8px 16px;
+width: 148px;
+height: 40px;
+background: #4e75ff;
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.04em;
+color: #fff;
+display: block;
+border: none;
+}
+
+

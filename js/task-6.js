@@ -32,10 +32,52 @@
 // Після натискання на кнопку Destroy усі квадрати з div#boxes мають видалятися
 
 
-
-
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+const createBtn = document.querySelector("button[data-create]");
+const destroyBtn = document.querySelector("button[data-destroy]");
+const addNewBoxes = document.querySelector("#boxes");
+const inputBtn = document.querySelector('input');
+
+
+const arreyBoxes = [];
+
+function createBoxes(amount) {
+    let boxSize = 30;
+    if (amount <= 1 || amount >= 100) {
+        return alert('value out of range')
+    } else {
+        for (let i = 0; i < amount; i++) {
+          
+    const box = `<div class="js-creat-box" style="display: inline-block;
+               width: ${boxSize}px;
+               height: ${boxSize}px;
+               background-color: ${getRandomHexColor()};">
+           </div>`
+    arreyBoxes.push(box);
+    boxSize += 10;
+    }    
+        addNewBoxes.insertAdjacentHTML('beforeend', arreyBoxes.join(''));
+  } 
+};
+
+
+// destroy button  //
+function onDestroyClick() {
+    addNewBoxes.innerHTML = "";
+}
+destroyBtn.addEventListener("click", onDestroyClick);
+
+
+// create button  //
+function onCreateClick() {
+    onDestroyClick();
+    createBoxes(inputBtn.value);
+    inputBtn.value = "";  
+   };
+createBtn.addEventListener("click", onCreateClick);
+
